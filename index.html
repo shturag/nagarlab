@@ -81,6 +81,35 @@
         </div>
       </section>
 
+      <section class="team reveal">
+        <div class="section-heading">
+          <p data-i18n="team_kicker">Team Overview</p>
+          <h2 data-i18n="team_title">People Behind NagarLab</h2>
+        </div>
+        <div class="team-grid">
+          <article class="team-card">
+            <h3 data-i18n="team_member_1_name">Kamrul Hasan</h3>
+            <p class="team-role" data-i18n="team_member_1_role">Tech Lead</p>
+            <a class="team-link" href="https://www.linkedin.com/in/kamrul-hasan-824a06a4/" target="_blank" rel="noopener noreferrer" data-i18n="team_member_1_link">LinkedIn Profile</a>
+          </article>
+          <article class="team-card">
+            <h3 data-i18n="team_member_2_name">Khalil Kazi Ibrahim</h3>
+            <p class="team-role" data-i18n="team_member_2_role">Engineering & Platform Lead</p>
+            <a class="team-link" href="https://www.linkedin.com/in/khalil-kazi-ibrahim/" target="_blank" rel="noopener noreferrer" data-i18n="team_member_2_link">LinkedIn Profile</a>
+          </article>
+          <article class="team-card">
+            <h3 data-i18n="team_member_3_name">Shakhawat Hossain Turag</h3>
+            <p class="team-role" data-i18n="team_member_3_role">Data & AI Lead</p>
+            <a class="team-link" href="https://www.linkedin.com/in/shakhawat-hossain-turag/" target="_blank" rel="noopener noreferrer" data-i18n="team_member_3_link">LinkedIn Profile</a>
+          </article>
+          <article class="team-card">
+            <h3 data-i18n="team_member_4_name">Rabby Raz</h3>
+            <p class="team-role" data-i18n="team_member_4_role">Partnerships & Operations Lead</p>
+            <a class="team-link" href="https://www.linkedin.com/in/rabbyraz/" target="_blank" rel="noopener noreferrer" data-i18n="team_member_4_link">LinkedIn Profile</a>
+          </article>
+        </div>
+      </section>
+
       <section class="platforms reveal">
         <div class="section-heading">
           <p data-i18n="platform_kicker">Live Platforms</p>
@@ -94,6 +123,10 @@
           <a class="platform-card" href="https://braingainbd.com" target="_blank" rel="noopener noreferrer">
             <h3>BrainGainBD.com</h3>
             <p data-i18n="platform_2">Connects diaspora skills and expertise with national needs across projects, public sectors, private sectors, and agencies.</p>
+          </a>
+          <a class="platform-card" href="https://bazardorbd.com" target="_blank" rel="noopener noreferrer">
+            <h3>BazardorBD.com</h3>
+            <p data-i18n="platform_3">Local engagement engine where community problems become tracked services and collective action.</p>
           </a>
           <article class="platform-card coming-soon">
             <h3 data-i18n="platform_coming_title">More Platforms Incoming</h3>
@@ -117,6 +150,54 @@
             <p data-i18n="upcoming_coming_desc">Additional focused products are being prepared for phased deployment.</p>
           </article>
         </div>
+      </section>
+
+      <section class="live-metrics reveal">
+        <div class="section-heading">
+          <p data-i18n="metrics_kicker">Live Metrics</p>
+          <h2 data-i18n="metrics_title">Current Delivery Snapshot</h2>
+        </div>
+        <div class="metrics-grid" id="metricsGrid" aria-live="polite"></div>
+      </section>
+
+      <section class="status-board reveal">
+        <div class="section-heading">
+          <p data-i18n="status_kicker">Project Status</p>
+          <h2 data-i18n="status_title">Delivery Board</h2>
+        </div>
+        <div class="status-grid" id="statusGrid" aria-live="polite"></div>
+      </section>
+
+      <section class="partner-form reveal">
+        <div class="section-heading">
+          <p data-i18n="contact_kicker">Partnership</p>
+          <h2 data-i18n="contact_title">Work With NagarLab</h2>
+        </div>
+        <form id="partnerForm" class="contact-form">
+          <label for="name" data-i18n="form_name_label">Name</label>
+          <input id="name" name="name" type="text" required data-i18n-placeholder="form_name_placeholder" placeholder="Your full name" />
+
+          <label for="email" data-i18n="form_email_label">Email</label>
+          <input id="email" name="email" type="email" required data-i18n-placeholder="form_email_placeholder" placeholder="your@email.com" />
+
+          <label for="org" data-i18n="form_org_label">Organization</label>
+          <input id="org" name="org" type="text" data-i18n-placeholder="form_org_placeholder" placeholder="Ministry / NGO / Company" />
+
+          <label for="category" data-i18n="form_category_label">Category</label>
+          <select id="category" name="category" required>
+            <option value="" data-i18n="form_category_placeholder">Select one</option>
+            <option value="Government" data-i18n="form_cat_government">Government</option>
+            <option value="NGO" data-i18n="form_cat_ngo">NGO</option>
+            <option value="Private Sector" data-i18n="form_cat_private">Private Sector</option>
+            <option value="Diaspora" data-i18n="form_cat_diaspora">Diaspora</option>
+          </select>
+
+          <label for="message" data-i18n="form_message_label">Message</label>
+          <textarea id="message" name="message" rows="4" required data-i18n-placeholder="form_message_placeholder" placeholder="Tell us your challenge and expected support."></textarea>
+
+          <button type="submit" data-i18n="form_submit">Send Partnership Request</button>
+          <p id="formStatus" class="form-status" aria-live="polite"></p>
+        </form>
       </section>
 
       <section class="use-cases reveal">
@@ -171,6 +252,25 @@
     <footer class="reveal">
       <h2>NagarLab</h2>
       <p data-i18n="footer_tagline">Local problems. Scalable solutions.</p>
+      <p class="footer-ideas-title" data-i18n="footer_ideas_title">How You Can Engage</p>
+      <div class="footer-ideas" aria-label="Footer ideas">
+        <article class="footer-idea-card">
+          <strong data-i18n="footer_idea_1">Monthly Policy Brief</strong>
+          <span data-i18n="footer_idea_1_desc">A concise monthly summary of top citizen signals, risks, and actionable policy insights.</span>
+        </article>
+        <article class="footer-idea-card">
+          <strong data-i18n="footer_idea_2">Case Studies Archive</strong>
+          <span data-i18n="footer_idea_2_desc">Documented implementation stories showing what worked, what changed, and measurable outcomes.</span>
+        </article>
+        <article class="footer-idea-card">
+          <strong data-i18n="footer_idea_3">Partnership Call</strong>
+          <span data-i18n="footer_idea_3_desc">Open invitations for ministries, local governments, NGOs, and private teams to co-build pilots.</span>
+        </article>
+        <article class="footer-idea-card">
+          <strong data-i18n="footer_idea_4">Public Roadmap</strong>
+          <span data-i18n="footer_idea_4_desc">Quarterly roadmap with planned features, launch windows, and transparent delivery updates.</span>
+        </article>
+      </div>
       <a href="mailto:hello_nagarlab@outlook.com">hello_nagarlab@outlook.com</a>
     </footer>
 
@@ -191,6 +291,20 @@
           deliver_2: "Live citizen sentiment and policy response tracking",
           deliver_3: "Signal detection for misinformation and social risk",
           deliver_4: "Diaspora expertise matching for national priorities",
+          team_kicker: "Team Overview",
+          team_title: "People Behind NagarLab",
+          team_member_1_name: "Kamrul Hasan",
+          team_member_1_role: "Tech Lead",
+          team_member_1_link: "LinkedIn Profile",
+          team_member_2_name: "Khalil Kazi Ibrahim",
+          team_member_2_role: "Engineering & Platform Lead",
+          team_member_2_link: "LinkedIn Profile",
+          team_member_3_name: "Shakhawat Hossain Turag",
+          team_member_3_role: "Data & AI Lead",
+          team_member_3_link: "LinkedIn Profile",
+          team_member_4_name: "Rabby Raz",
+          team_member_4_role: "Partnerships & Operations Lead",
+          team_member_4_link: "LinkedIn Profile",
           dhaka_kicker: "Dhaka Visuals",
           dhaka_title: "Dhaka in Focus",
           dhaka_cap_1: "National Parliament House, Dhaka",
@@ -208,6 +322,33 @@
           upcoming_1: "Community problem reporting and local service follow-up platform planned for broader rollout.",
           upcoming_coming_title: "More Rollouts in Pipeline",
           upcoming_coming_desc: "Additional focused products are being prepared for phased deployment.",
+          metrics_kicker: "Live Metrics",
+          metrics_title: "Current Delivery Snapshot",
+          status_kicker: "Project Status",
+          status_title: "Delivery Board",
+          contact_kicker: "Partnership",
+          contact_title: "Work With NagarLab",
+          status_live: "Live",
+          status_pilot: "Pilot",
+          status_planned: "Planned",
+          status_updated: "Updated",
+          form_name_label: "Name",
+          form_name_placeholder: "Your full name",
+          form_email_label: "Email",
+          form_email_placeholder: "your@email.com",
+          form_org_label: "Organization",
+          form_org_placeholder: "Ministry / NGO / Company",
+          form_category_label: "Category",
+          form_category_placeholder: "Select one",
+          form_cat_government: "Government",
+          form_cat_ngo: "NGO",
+          form_cat_private: "Private Sector",
+          form_cat_diaspora: "Diaspora",
+          form_message_label: "Message",
+          form_message_placeholder: "Tell us your challenge and expected support.",
+          form_submit: "Send Partnership Request",
+          form_success: "Your email app should open now with the prefilled request.",
+          form_error: "Could not open email app. Please send directly to hello_nagarlab@outlook.com.",
           use_kicker: "Government Use Cases",
           use_title: "Where We Create High Impact",
           use_1_title: "Citizen Insight System",
@@ -232,7 +373,16 @@
           outcome_4_d: "Mobilized global skills and networks",
           outcome_5_t: "Transparent Reporting",
           outcome_5_d: "Credible progress for all stakeholders",
-          footer_tagline: "Local problems. Scalable solutions."
+          footer_tagline: "Local problems. Scalable solutions.",
+          footer_ideas_title: "How You Can Engage",
+          footer_idea_1: "Monthly Policy Brief",
+          footer_idea_1_desc: "A concise monthly summary of top citizen signals, risks, and actionable policy insights.",
+          footer_idea_2: "Case Studies Archive",
+          footer_idea_2_desc: "Documented implementation stories showing what worked, what changed, and measurable outcomes.",
+          footer_idea_3: "Partnership Call",
+          footer_idea_3_desc: "Open invitations for ministries, local governments, NGOs, and private teams to co-build pilots.",
+          footer_idea_4: "Public Roadmap",
+          footer_idea_4_desc: "Quarterly roadmap with planned features, launch windows, and transparent delivery updates."
         },
         bn: {
           eyebrow: "বাংলাদেশের জনসেবা উদ্ভাবন",
@@ -249,6 +399,20 @@
           deliver_2: "নাগরিকের মতামত ও নীতির প্রতিক্রিয়ার লাইভ বিশ্লেষণ",
           deliver_3: "ভুল তথ্য ও সামাজিক ঝুঁকির প্রাথমিক সংকেত শনাক্তকরণ",
           deliver_4: "জাতীয় অগ্রাধিকারের সঙ্গে প্রবাসী বিশেষজ্ঞদের সংযোগ",
+          team_kicker: "দল পরিচিতি",
+          team_title: "NagarLab-এর পেছনের মানুষ",
+          team_member_1_name: "Kamrul Hasan",
+          team_member_1_role: "টেক লিড",
+          team_member_1_link: "লিংকডইন প্রোফাইল",
+          team_member_2_name: "Khalil Kazi Ibrahim",
+          team_member_2_role: "ইঞ্জিনিয়ারিং ও প্ল্যাটফর্ম লিড",
+          team_member_2_link: "লিংকডইন প্রোফাইল",
+          team_member_3_name: "Shakhawat Hossain Turag",
+          team_member_3_role: "ডেটা ও এআই লিড",
+          team_member_3_link: "লিংকডইন প্রোফাইল",
+          team_member_4_name: "Rabby Raz",
+          team_member_4_role: "পার্টনারশিপ ও অপারেশনস লিড",
+          team_member_4_link: "লিংকডইন প্রোফাইল",
           dhaka_kicker: "ঢাকার ছবি",
           dhaka_title: "ঢাকা এক নজরে",
           dhaka_cap_1: "জাতীয় সংসদ ভবন, ঢাকা",
@@ -266,6 +430,33 @@
           upcoming_1: "কমিউনিটির সমস্যা রিপোর্টিং ও স্থানীয় সেবা ফলো-আপ প্ল্যাটফর্মটি বিস্তৃতভাবে চালুর পরিকল্পনায় আছে।",
           upcoming_coming_title: "আরও লঞ্চ প্রস্তুত হচ্ছে",
           upcoming_coming_desc: "ধাপে ধাপে ডিপ্লয়মেন্টের জন্য আরও কিছু ফোকাসড পণ্য প্রস্তুত করা হচ্ছে।",
+          metrics_kicker: "লাইভ মেট্রিক্স",
+          metrics_title: "বর্তমান ডেলিভারি চিত্র",
+          status_kicker: "প্রকল্পের অবস্থা",
+          status_title: "ডেলিভারি বোর্ড",
+          contact_kicker: "সহযোগিতা",
+          contact_title: "NagarLab-এর সাথে কাজ করুন",
+          status_live: "চালু",
+          status_pilot: "পাইলট",
+          status_planned: "পরিকল্পিত",
+          status_updated: "আপডেট",
+          form_name_label: "নাম",
+          form_name_placeholder: "আপনার পূর্ণ নাম",
+          form_email_label: "ইমেইল",
+          form_email_placeholder: "আপনার@email.com",
+          form_org_label: "প্রতিষ্ঠান",
+          form_org_placeholder: "মন্ত্রণালয় / এনজিও / কোম্পানি",
+          form_category_label: "ধরন",
+          form_category_placeholder: "একটি নির্বাচন করুন",
+          form_cat_government: "সরকারি",
+          form_cat_ngo: "এনজিও",
+          form_cat_private: "প্রাইভেট সেক্টর",
+          form_cat_diaspora: "প্রবাসী",
+          form_message_label: "বার্তা",
+          form_message_placeholder: "আপনার চ্যালেঞ্জ এবং কী ধরনের সহায়তা চান লিখুন।",
+          form_submit: "সহযোগিতার অনুরোধ পাঠান",
+          form_success: "আপনার ইমেইল অ্যাপ এখন খুলে প্রি-ফিল করা বার্তা দেখাবে।",
+          form_error: "ইমেইল অ্যাপ খোলা যায়নি। দয়া করে সরাসরি hello_nagarlab@outlook.com এ পাঠান।",
           use_kicker: "উচ্চ-প্রভাব ব্যবহার ক্ষেত্র",
           use_title: "যেখানে আমাদের প্রভাব সবচেয়ে বেশি",
           use_1_title: "নাগরিক অন্তর্দৃষ্টি ব্যবস্থা",
@@ -290,7 +481,16 @@
           outcome_4_d: "বিশ্বজুড়ে ছড়িয়ে থাকা দক্ষতা ও নেটওয়ার্কের ব্যবহার",
           outcome_5_t: "স্বচ্ছ প্রতিবেদন",
           outcome_5_d: "সব পক্ষের জন্য বিশ্বাসযোগ্য অগ্রগতির প্রমাণ",
-          footer_tagline: "স্থানীয় সমস্যা, স্কেলযোগ্য সমাধান।"
+          footer_tagline: "স্থানীয় সমস্যা, স্কেলযোগ্য সমাধান।",
+          footer_ideas_title: "আপনি যেভাবে যুক্ত হতে পারেন",
+          footer_idea_1: "মাসিক নীতি সংক্ষিপ্ত প্রতিবেদন",
+          footer_idea_1_desc: "নাগরিক সংকেত, ঝুঁকি এবং নীতিগত করণীয় নিয়ে প্রতি মাসে সংক্ষিপ্ত ও কার্যকর বিশ্লেষণ।",
+          footer_idea_2: "কেস স্টাডি আর্কাইভ",
+          footer_idea_2_desc: "কোন উদ্যোগ কীভাবে কাজ করেছে, কী পরিবর্তন এসেছে এবং কী ফল পাওয়া গেছে তার নথিভুক্ত উদাহরণ।",
+          footer_idea_3: "সহযোগিতা আহ্বান",
+          footer_idea_3_desc: "মন্ত্রণালয়, স্থানীয় সরকার, এনজিও ও বেসরকারি দলের সঙ্গে যৌথ পাইলট তৈরির উন্মুক্ত আহ্বান।",
+          footer_idea_4: "পাবলিক রোডম্যাপ",
+          footer_idea_4_desc: "প্রতি ত্রৈমাসিকে পরিকল্পিত ফিচার, সম্ভাব্য লঞ্চ সময় এবং অগ্রগতির স্বচ্ছ আপডেট।"
         }
       };
 
@@ -298,6 +498,89 @@
         en: "NagarLab | Data & AI for Better Governance in Bangladesh",
         bn: "NagarLab | বাংলাদেশে সুশাসন উন্নয়নে ডেটা ও কৃত্রিম বুদ্ধিমত্তার ব্যবহার"
       };
+
+      const metrics = [
+        { value: "3", label_en: "Projects tracked", label_bn: "ট্র্যাককৃত প্রকল্প" },
+        { value: "2", label_en: "Pilot deployments", label_bn: "পাইলট ডিপ্লয়মেন্ট" },
+        { value: "64K", label_en: "Citizen feedback points", label_bn: "নাগরিক ফিডব্যাক পয়েন্ট" },
+        { value: "11", label_en: "District pilots", label_bn: "জেলা পাইলট" }
+      ];
+
+      const projects = [
+        {
+          name: "VoterPulseBD",
+          url: "https://voterpulsebd.com",
+          status: "pilot",
+          updated: "2026-03-10",
+          summary_en: "Citizen pulse monitoring with issue heatmaps and trend intelligence.",
+          summary_bn: "ইস্যু হিটম্যাপ ও ট্রেন্ড ইন্টেলিজেন্সসহ নাগরিক মতামত পর্যবেক্ষণ।"
+        },
+        {
+          name: "BrainGainBD",
+          url: "https://braingainbd.com",
+          status: "pilot",
+          updated: "2026-03-10",
+          summary_en: "Diaspora talent matching for high-priority public service challenges.",
+          summary_bn: "জনসেবার অগ্রাধিকার চ্যালেঞ্জে প্রবাসী দক্ষতা সংযোগের প্ল্যাটফর্ম।"
+        },
+        {
+          name: "BazardorBD",
+          url: "https://bazardorbd.com",
+          status: "planned",
+          updated: "2026-03-10",
+          summary_en: "Market intelligence and community reporting pipeline for local administrations.",
+          summary_bn: "স্থানীয় প্রশাসনের জন্য বাজার তথ্য ও কমিউনিটি রিপোর্টিং প্ল্যাটফর্ম।"
+        }
+      ];
+      const LANG_STORAGE_KEY = "nagarlab_lang";
+
+      function formatDate(dateString, lang) {
+        const locale = lang === "bn" ? "bn-BD" : "en-US";
+        return new Date(`${dateString}T00:00:00`).toLocaleDateString(locale, {
+          year: "numeric",
+          month: "short",
+          day: "numeric"
+        });
+      }
+
+      function renderMetrics(lang) {
+        const grid = document.getElementById("metricsGrid");
+        if (!grid) return;
+        grid.innerHTML = metrics
+          .map(
+            (item) => `
+              <article class="metric-card">
+                <strong>${item.value}</strong>
+                <span>${lang === "bn" ? item.label_bn : item.label_en}</span>
+              </article>
+            `
+          )
+          .join("");
+      }
+
+      function renderProjectBoard(lang) {
+        const board = document.getElementById("statusGrid");
+        if (!board) return;
+        board.innerHTML = projects
+          .map(
+            (project) => `
+              <article class="status-card">
+                <div class="status-top">
+                  <h3><a href="${project.url}" target="_blank" rel="noopener noreferrer">${project.name}</a></h3>
+                  <span class="status-badge status-${project.status}">${i18n[lang][`status_${project.status}`]}</span>
+                </div>
+                <p>${lang === "bn" ? project.summary_bn : project.summary_en}</p>
+                <small>${i18n[lang].status_updated}: ${formatDate(project.updated, lang)}</small>
+              </article>
+            `
+          )
+          .join("");
+      }
+
+      function renderDynamicSections(lang) {
+        renderMetrics(lang);
+        renderProjectBoard(lang);
+      }
 
       function setLanguage(lang) {
         document.documentElement.lang = lang;
@@ -311,14 +594,49 @@
           }
         });
 
+        document.querySelectorAll("[data-i18n-placeholder]").forEach((el) => {
+          const key = el.getAttribute("data-i18n-placeholder");
+          if (i18n[lang][key]) {
+            el.setAttribute("placeholder", i18n[lang][key]);
+          }
+        });
+
         document.querySelectorAll(".lang-btn").forEach((btn) => {
           btn.classList.toggle("active", btn.dataset.lang === lang);
         });
+
+        localStorage.setItem(LANG_STORAGE_KEY, lang);
+        renderDynamicSections(lang);
       }
 
       document.querySelectorAll(".lang-btn").forEach((btn) => {
         btn.addEventListener("click", () => setLanguage(btn.dataset.lang));
       });
+
+      document.getElementById("partnerForm").addEventListener("submit", (event) => {
+        event.preventDefault();
+        const lang = document.documentElement.lang === "bn" ? "bn" : "en";
+        const formData = new FormData(event.currentTarget);
+        const subject = encodeURIComponent(`NagarLab Partnership Request - ${formData.get("category")}`);
+        const body = encodeURIComponent(
+          `Name: ${formData.get("name")}\nEmail: ${formData.get("email")}\nOrganization: ${formData.get("org")}\nCategory: ${formData.get(
+            "category"
+          )}\n\nMessage:\n${formData.get("message")}`
+        );
+
+        const statusText = document.getElementById("formStatus");
+        try {
+          window.location.href = `mailto:hello_nagarlab@outlook.com?subject=${subject}&body=${body}`;
+          statusText.textContent = i18n[lang].form_success;
+          event.currentTarget.reset();
+        } catch (error) {
+          statusText.textContent = i18n[lang].form_error;
+        }
+      });
+
+      const savedLang = localStorage.getItem(LANG_STORAGE_KEY);
+      const initialLang = savedLang === "bn" || savedLang === "en" ? savedLang : navigator.language.toLowerCase().startsWith("bn") ? "bn" : "en";
+      setLanguage(initialLang);
     </script>
   </body>
 </html>
